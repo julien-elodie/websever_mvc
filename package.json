@@ -1,0 +1,16 @@
+{
+  "name": "websever_mvc",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.5",
+    "express-session": "^1.15.6",
+    "gt3-sdk": "^2.0.0",
+    "pg": "^7.3.0",
+    "promise": "^8.0.1"
+  }
+}
