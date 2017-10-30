@@ -1,3 +1,19 @@
+var jumpToHome = () => {
+  var form = document.createElement("form");
+  form.id = "form";
+  form.name = "form";
+  document.body.appendChild(form);
+  var input = document.createElement("input");
+  input.type = "text";
+  input.name = "username";
+  input.value = $(".username").val();
+  form.appendChild(input);
+  form.method = "get";
+  form.action = "../home";
+  form.submit();
+  document.body.removeChild(form);
+};
+
 var handler = captchaObj => {
   captchaObj.onReady(() => {}).onSuccess(() => {
     var result = captchaObj.getValidate();
@@ -18,6 +34,7 @@ var handler = captchaObj => {
       success: data => {
         if (data.status === "success") {
           alert("登录成功");
+          jumpToHome();
         } else {
           alert("登录失败,请完成验证");
           captchaObj.reset();
@@ -25,9 +42,11 @@ var handler = captchaObj => {
       }
     };
     $.ajax(options);
-    $("#submit").click(() => {
+  });
+  $("#submit").click(() => {
+    if ($("#username").val() != "" && $("#password").val() != "") {
       captchaObj.verify();
-    });
+    }
   });
 };
 

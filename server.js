@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+var bodyParser = require('body-parser');
 var session = require('express-session');
 
 const app = express();
@@ -15,6 +16,10 @@ app.set('view engine', 'ejs');
 
 // public
 app.use('/public', express.static(path.join(__dirname, 'public')));
+
+// body-parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // session
 app.use(session({
