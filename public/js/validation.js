@@ -1,5 +1,5 @@
 var handler = captchaObj => {
-  captchaObj.onReady(() => {}).onSucess(() => {
+  captchaObj.onReady(() => {}).onSuccess(() => {
     var result = captchaObj.getValidate();
     if (!result) {
       return alert("请完成验证");
@@ -35,7 +35,7 @@ options = {
   url: "../login/validate?t=" + new Date().getTime(),
   type: "get",
   dataType: "json",
-  success: function(data) {
+  success: data => {
     initGeetest(
       {
         gt: data.gt,
