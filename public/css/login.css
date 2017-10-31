@@ -1,3 +1,12 @@
-fieldset{
-    border:2px groove;
+.box {
+  border: 1px groove;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px #565656;
+}
+fieldset {
+  border: 2px groove;
+  border-radius: 20px;
+}
+legend {
+  text-align: center;
 }

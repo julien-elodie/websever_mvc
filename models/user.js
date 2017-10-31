@@ -1,6 +1,6 @@
 const pg = require("pg");
 
-exports.getData = (text, para, result) => {
+var getData = (text, para, result) => {
   const config = {
     user: "julien-elodie",
     database: "videoinfodb",
@@ -21,5 +21,19 @@ exports.getData = (text, para, result) => {
       }
       client.end();
     });
+  });
+};
+
+exports.getData = getData;
+
+exports.verify = (user, pass, result) => {
+  const text = "select * from userinfo where username = $1 and password = $2;";
+  const para = [user, pass];
+  getData(text, para, res => {
+    if (JSON.stringify(res) === '[]') {
+      result("fail");
+    } else {
+      result("success");
+    }
   });
 };

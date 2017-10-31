@@ -1,4 +1,4 @@
-var jumpToHome = () => {
+var jumpToHome = (username) => {
   var form = document.createElement("form");
   form.id = "form";
   form.name = "form";
@@ -6,7 +6,7 @@ var jumpToHome = () => {
   var input = document.createElement("input");
   input.type = "text";
   input.name = "username";
-  input.value = $(".username").val();
+  input.value = username;
   form.appendChild(input);
   form.method = "get";
   form.action = "../home";
@@ -34,7 +34,7 @@ var handler = captchaObj => {
       success: data => {
         if (data.status === "success") {
           alert("登录成功");
-          jumpToHome();
+          jumpToHome($("#username").val());
         } else {
           alert("登录失败,请完成验证");
           captchaObj.reset();
