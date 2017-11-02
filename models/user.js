@@ -2,8 +2,9 @@ const pg = require("pg");
 
 var getData = (text, para, result) => {
   const config = {
-    user: "julien-elodie",
-    database: "videoinfodb",
+    user: "ubuntu",
+    host: "111.230.15.157",
+    database: "userinfodb",
     password: "wyq2644756656",
     port: "5432"
   };
