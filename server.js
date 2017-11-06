@@ -9,6 +9,7 @@ const app = express();
 const router = require('./lib/router');
 const login = require('./lib/routes/login')
 const home = require('./lib/routes/home')
+const master = require('./lib/routes/master')
 
 // views
 app.set('views', path.join(__dirname, 'views'));
@@ -35,6 +36,7 @@ app.use(session({
 app.use('/', router);
 app.use('/login', login);
 app.use('/home', home);
+app.use('/master', master)
 
 // server
 const server = app.listen(3000, () => {
