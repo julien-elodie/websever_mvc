@@ -1,0 +1,11 @@
+html{
+    min-width: 600px;
+}
+.li-container{
+    width: 100%;
+}
+.overflow{
+    overflow: hidden; 
+    text-overflow:ellipsis;  
+    white-space: nowrap;
+}
