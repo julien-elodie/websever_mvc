@@ -75,6 +75,7 @@ var TableInit = function () {
                     title: '收藏量'
                 },
             ],
+            /*
             data: [
                 {
                     "id":16056845,
@@ -87,6 +88,7 @@ var TableInit = function () {
                     "collects":40
                 }
             ],
+            */
         });
     };
 

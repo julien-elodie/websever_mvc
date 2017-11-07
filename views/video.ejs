@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title><%= video.title %>|<%= video.username %></title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../public/bootstrap4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/video.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card border-primary">
+                    <video class="card-img-top" src="../public/video/video.mp4" width="100%" height="100%" controls> 
+                    </video>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card border-info">
+                    <div class="card-body list-group-item active">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-0 overflow card-title"><%= video.title %></h5>
+                        </div>
+                        <div>
+                            <small><%= video.username %></small>
+                            <small><%= video.date %></small>
+                        </div>
+                    </div>
+                    <div class="card-body pb-0">
+                        <p class="mb-0 overflow card-text"><small><%= video.content %></small></p>
+                    </div>
+                    <hr class="m-2">
+                    <div class="card-body pt-0 pb-2">
+                        <div>
+                            <small>播放:</small><small><%= video.plays %></small>
+                            <small>评论:</small><small><%= video.comments %></small>
+                            <small>硬币:</small><small><%= video.coins %></small>
+                            <small>收藏:</small><small><%= video.collects %></small>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card border-info">
+                    <div class="card-body container pt-2 pb-2">
+                        <div class="row">
+                            <div class="col-sm-3 p-1 card border-link">
+                                <a class="m-auto" href="../public/img/img.jpg">
+                                    <img class="card-img" src="../public/img/img.jpg" alt="">
+                                </a>                            
+                            </div>
+                            <div class="col-sm-9 p-1 card border-light">
+                                <div class="card-body p-2">
+                                    <p class="mb-0 card-title"><small><%= video.username %></small></p>
+                                    <p class="mb-0 overflow card-text"><small><%= video.usercontent %></small></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type='text/javascript', src='../public/js/jquery-3.2.1.min.js'></script>
+    <script type='text/javascript', src='../public/popper/popper.min.js'></script>
+    <script type='text/javascript', src='../public/bootstrap4/js/bootstrap.min.js'></script>
+  </body>
+</html>

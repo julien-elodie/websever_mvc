@@ -14,24 +14,28 @@
                     <ul class="list-group">
                         <li class="list-group-item active">视频</li>
                         <% for(var i=0; i<videos.length; i++) { %>
-                            <li class="list-group-item list-group-item-action flex-column align-items-start p-2">
+                            <li class="list-group-item list-group-item-action flex-column align-items-start p-2 card">
                                 <div class="container li-container">
                                     <div class="row">
-                                        <div class="col-md-3 p-1">
-                                            <img class="img-fluid" src="http:<%= videos[i].imgsrc %>" alt="">
+                                        <div class="col-md-3 p-1 card border-link">
+                                            <a class="m-auto" href="http:<%= videos[i].imgsrc %>"><img class="card-img" src="http:<%= videos[i].imgsrc %>" alt=""></a>
                                         </div>
-                                        <div class="col-md-9 p-1">
+                                        <div class="col-md-9 p-1 card border-info">
                                             <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1 p-1 overflow"><%= videos[i].title %></h5>
-                                                
+                                                <h5 class="mb-0 p-1 overflow"><a href="javascript:;" onclick="javascript:$.StandardPost('/video', {id:<%= videos[i].id %>})"><%= videos[i].title %></a></h5>
+                                                <a href="/master"><small>编辑</small></a>
                                             </div>
-                                            <small><%= videos[i].date %></small>
-                                            <small><%= videos[i].username %></small>
-                                            <p class="mb-1 p-1 overflow"><%= videos[i].content %></p>
-                                            <small>播放:</small><small><%= videos[i].plays %></small>
-                                            <small>评论:</small><small><%= videos[i].comments %></small>
-                                            <small>硬币:</small><small><%= videos[i].coins %></small>
-                                            <small>收藏:</small><small><%= videos[i].collects %></small>
+                                            <div>
+                                                <small><%= videos[i].date %></small>
+                                                <small><%= videos[i].username %></small>
+                                            </div>
+                                            <p class="mb-0 p-1 overflow"><%= videos[i].content %></p>
+                                            <div>
+                                                <small>播放:</small><small><%= videos[i].plays %></small>
+                                                <small>评论:</small><small><%= videos[i].comments %></small>
+                                                <small>硬币:</small><small><%= videos[i].coins %></small>
+                                                <small>收藏:</small><small><%= videos[i].collects %></small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -44,5 +48,6 @@
         <script type='text/javascript', src='../public/js/jquery-3.2.1.min.js'></script>
         <script type='text/javascript', src='../public/popper/popper.min.js'></script>
         <script type='text/javascript', src='../public/bootstrap4/js/bootstrap.min.js'></script>
+        <script type='text/javascript', src='../public/js/post.js'></script>
     </body>
 </html>

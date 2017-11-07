@@ -5,6 +5,8 @@ html{
     width: 100%;
 }
 .overflow{
+    position: relative;
+
     overflow: hidden; 
     text-overflow:ellipsis;  
     white-space: nowrap;
