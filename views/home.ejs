@@ -1,53 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Home</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../public/bootstrap4/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../public/css/home.css">
-    </head>
-    <body>
-        <div class='container'>
-            <div class='row'>
-                <div class='col-md-12 m-auto'>
-                    <ul class="list-group">
-                        <li class="list-group-item active">视频</li>
-                        <% for(var i=0; i<videos.length; i++) { %>
-                            <li class="list-group-item list-group-item-action flex-column align-items-start p-2 card">
-                                <div class="container li-container">
-                                    <div class="row">
-                                        <div class="col-md-3 p-1 card border-link">
-                                            <a class="m-auto" href="http:<%= videos[i].imgsrc %>"><img class="card-img" src="http:<%= videos[i].imgsrc %>" alt=""></a>
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/home.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class='container main'>
+        <div class='row'>
+            <div class='col-md-12 m-auto'>
+                <ul class="list-group">
+                    <li class="list-group-item active">视频</li>
+                    <% for(var i=0; i<videos.length; i++) { %>
+                        <li class="list-group-item list-group-item-action flex-column align-items-start p-2 card">
+                            <div class="container li-container">
+                                <div class="row">
+                                    <div class="col-md-3 p-1 card border-link">
+                                        <a class="m-auto" href="http:<%= videos[i].imgsrc %>">
+                                            <img class="card-img" src="http:<%= videos[i].imgsrc %>" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 p-1 card border-info">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-0 p-1 overflow">
+                                                <a href="javascript:;" onclick="javascript:$.StandardPost('/video', {id:<%= videos[i].id %>})">
+                                                    <%= videos[i].title %>
+                                                </a>
+                                            </h5>
+                                            <a href="/master">
+                                                <small>编辑</small>
+                                            </a>
                                         </div>
-                                        <div class="col-md-9 p-1 card border-info">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-0 p-1 overflow"><a href="javascript:;" onclick="javascript:$.StandardPost('/video', {id:<%= videos[i].id %>})"><%= videos[i].title %></a></h5>
-                                                <a href="/master"><small>编辑</small></a>
-                                            </div>
-                                            <div>
-                                                <small><%= videos[i].date %></small>
-                                                <small><%= videos[i].username %></small>
-                                            </div>
-                                            <p class="mb-0 p-1 overflow"><%= videos[i].content %></p>
-                                            <div>
-                                                <small>播放:</small><small><%= videos[i].plays %></small>
-                                                <small>评论:</small><small><%= videos[i].comments %></small>
-                                                <small>硬币:</small><small><%= videos[i].coins %></small>
-                                                <small>收藏:</small><small><%= videos[i].collects %></small>
-                                            </div>
+                                        <div>
+                                            <small>
+                                                <%= videos[i].date %>
+                                            </small>
+                                            <small>
+                                                <%= videos[i].username %>
+                                            </small>
+                                        </div>
+                                        <p class="mb-0 p-1 overflow">
+                                            <%= videos[i].content %>
+                                        </p>
+                                        <div>
+                                            <small>播放:</small>
+                                            <small>
+                                                <%= videos[i].plays %>
+                                            </small>
+                                            <small>评论:</small>
+                                            <small>
+                                                <%= videos[i].comments %>
+                                            </small>
+                                            <small>硬币:</small>
+                                            <small>
+                                                <%= videos[i].coins %>
+                                            </small>
+                                            <small>收藏:</small>
+                                            <small>
+                                                <%= videos[i].collects %>
+                                            </small>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
+                        </li>
                         <% } %>
-                    </ul>
-                </div>
+                </ul>
             </div>
         </div>
-        <script type='text/javascript', src='../public/js/jquery-3.2.1.min.js'></script>
-        <script type='text/javascript', src='../public/popper/popper.min.js'></script>
-        <script type='text/javascript', src='../public/bootstrap4/js/bootstrap.min.js'></script>
-        <script type='text/javascript', src='../public/js/post.js'></script>
-    </body>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script type='text/javascript' , src='../public/js/post.js'></script>
+</body>
+
 </html>

@@ -25,3 +25,11 @@ exports.getVideoData = (text, para) => {
     });
   });
 };
+
+exports.deleteVideoData = (text, para) => {
+  return new Promise((resolve, reject) => {
+    videoModel.getData(text, para, result => {
+      resolve(result);
+    });
+  });
+};

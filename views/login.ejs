@@ -1,49 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Login</title>
-        <meta charest='UTF-8'>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../public/bootstrap4/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../public/css/login.css">
-    </head>
-    <body>
-        <div class='container box'>
-            <div class='row'>
-                <div class="col-md-8 m-auto">
-                    <div class="container">
-                        <form action="" method="">
-                            <fieldset class="form-group row">
-                                <legend class="col-form-legend col-sm-3 m-auto" align="center">用户登录</legend>
-                                <div class="col-sm-10 m-auto">
-                                    <div class="form-group">
-                                        <label for="username">用户名:</label>
-                                        <input type="text" class="form-control" 
-                                            name="username" id="username" placeholder="用户名" aria-describedby="helpUsername">
-                                        <!--<small id="helpUsername" class="form-text text-muted" >Help text</small>-->
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">密 码:</label>
-                                        <input type="password" class="form-control" 
-                                            name="password" id="password" placeholder="密码" aria-describedby="helpPassword">
-                                        <!--<small id="helpPassword" class="form-text text-muted">Help text</small>-->
-                                    </div>
+
+<head>
+    <title>Login</title>
+    <meta charest='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/login.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class='container box'>
+        <div class='row'>
+            <div class="col-md-8 m-auto">
+                <div class="container">
+                    <form action="" method="">
+                        <fieldset class="form-group row">
+                            <legend class="col-form-legend col-sm-3 m-auto" align="center">用户登录</legend>
+                            <div class="col-sm-10 m-auto">
+                                <div class="form-group">
+                                    <label for="username">用户名:</label>
+                                    <input type="text" class="form-control" name="username" id="username" placeholder="用户名" aria-describedby="helpUsername">
+                                    <!--<small id="helpUsername" class="form-text text-muted" >Help text</small>-->
                                 </div>
-                            </fieldset>
-                            <div class="form-group row">
-                                <div class="col-sm-10 m-auto">
-                                    <div class="btn btn-primary btn-block" id='submit'>登录</butt>
+                                <div class="form-group">
+                                    <label for="password">密 码:</label>
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="密码" aria-describedby="helpPassword">
+                                    <!--<small id="helpPassword" class="form-text text-muted">Help text</small>-->
                                 </div>
                             </div>
-                        </form>
+                        </fieldset>
+                        <div class="form-group row">
+                            <div class="col-sm-10 m-auto">
+                                <div class="btn btn-primary btn-block" id='submit'>登录</butt>
+                                </div>
+                            </div>
+                    </form>
                     </div>
                 </div>
             </div>
         </div>
-        <script type='text/javascript', src='../public/js/jquery-3.2.1.min.js'></script>
-        <script type='text/javascript', src='../public/popper/popper.min.js'></script>
-        <script type='text/javascript', src='../public/bootstrap4/js/bootstrap.min.js'></script>
-        <script type='text/javascript', src='../public/js/gt.js'></script>
-        <script type='text/javascript', src='../public/js/validation.js'></script> 
-    </body>
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+        <script type='text/javascript' , src='../public/js/gt.js'></script>
+        <script type='text/javascript' , src='../public/js/validation.js'></script>
+</body>
+
 </html>

@@ -1,6 +1,9 @@
 html{
     min-width: 600px;
 }
+.main{
+    margin-top: 8px;
+}
 .li-container{
     width: 100%;
 }

@@ -8,3 +8,6 @@ html{
     font-weight: normal;
     line-height: 1.428571429;
 }
+.p-0{
+    padding: 0;
+}
