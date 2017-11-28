@@ -11,3 +11,11 @@ html{
 .p-0{
     padding: 0;
 }
+
+#attribute{
+    height: 28px;
+}
+
+label{
+    margin: 5px 0;
+}

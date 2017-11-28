@@ -27,7 +27,7 @@ var getData = (text, para, result) => {
 
 exports.getData = getData;
 
-exports.deleteData = (text, para, result) => {
+exports.processData = (text, para, result) => {
   const config = {
     user: "ubuntu",
     host: "111.230.15.157",
