@@ -96,14 +96,7 @@ var TableInit = function () {
         var temp = {   //这里的键的名字和控制器的变量名必须一直，这边改动，控制器也需要改成一样的
             limit: params.limit,   //页面大小
             offset: params.offset,  //页码
-            id: $("#txt_search_id").val(),
-            title: $("#txt_search_title").val(),
-            date: $("#txt_search_date").val(),
-            username: $("#txt_search_username").val(),
-            plays: $("#txt_search_plays").val(),
-            comments: $("#txt_search_comments").val(),
-            coins: $("#txt_search_coins").val(),
-            collects: $("#txt_search_collects").val(),
+            value: $(".search > input").val()
         };
         return temp;
     };
